@@ -1,0 +1,118 @@
+body
+{
+    position: relative;
+    float:left;
+    min-height: 100%;
+    width: 100%;
+    
+}
+.box1
+{
+    position: relative;
+    float: left;
+    height:100%;
+    margin-top:15px;
+    width:100%;
+    
+}
+.h1text
+{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-style: oblique;
+    text-decoration: double;
+    padding-top:90px;
+    
+}
+.images1
+{
+    position: relative;
+    float:left;
+   height:70%;
+   margin-left: 10px;
+   width:30%;
+   background-color: lightsalmon;
+}
+.box2
+{
+    position: relative;
+    float:left;
+    height:15%;
+    width:100%;
+    background-color:lightblue;
+}
+ .fontlogolink
+{
+    position: relative;
+    float:left;
+    height:100%;
+    width: 20%;
+    margin-left:554px;
+  
+}
+.link1
+{
+    position: relative;
+    float: left;
+    padding-top:10px;
+    margin-left:100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size:larger;
+    font-style: oblique;
+    text-decoration: double;
+    list-style: none;
+}
+/*.subox1imageText
+{
+    position: relative;
+    float: left;
+    height:120px;
+    width:100%;
+    background-color:burlywood;
+}*/
+/* .subbox1images
+{
+    position: relative;
+    float:left;
+    height:50%;
+    width:100%;
+    background-image: url("img/rakshabandhan.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+} */
+/*.subbox2images
+{
+    position: relative;
+    float:left;
+    height:90%;
+    width:100%;
+    background-image: url("img/diwali.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.subbox3images
+{
+    position: relative;
+    float:left;
+    height:500px;
+    width:50%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.subbox4images
+{
+    position: relative;
+    float:left;
+    height:550px;
+    width:100%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */

@@ -1,0 +1,229 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="header.css"> 
+    <!-- <link rel="stylesheet" href="style6.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <title>Regestration</title>
+    <!-- <link rel="stylesheet" href="regestration.css"> -->
+   <!--<style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+        /* *
+        {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Poppins",sans-serif;
+        } */
+        body
+        {
+            min-height: 100vh;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(130,106,251);
+        }
+        .container
+        {
+            position:relative;
+            max-width: 700px;
+            /* margin-top:150px; */
+            width:100%;
+            background: linear-gradient(296deg ,#509398, #6fa5a9, #509398,#6fa5a9);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px  25px rgba(0,0,0,0.1);
+            border-radius:25px 25px 25px;
+        }
+        .container .registrationheader
+        {
+            font-size: 1.5rem;
+            color:#333;
+            text-shadow: 2px 2px 5px blueviolet;
+            margin-top:10px;
+            padding-top:55px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .container .registrationform
+        {
+            margin-top: 30px;
+        }
+        .form .input-box
+        {
+            width:100%;
+            margin-top: 20px;
+        }
+        .form .input-box
+        {
+            width:100%;
+            margin-top: 20px;
+        }
+        .input-box label
+        {
+            color:#333;
+        }
+        .form :where(.input-box input,.select-box)
+        {
+            position: relative;
+            height: 50px;
+            width:100%;
+            outline: none;
+            font-size: 1rem;
+            color:#707070;
+            margin-top: 8px;
+            border:1px solid #ddd;
+            border-radius: 6px;
+            padding: 0 15px;
+        }
+        .gender label
+        {
+            color:#707070;
+        }
+        .address :where(input,.select-box)
+        {
+            margin-top: 15px;
+        }
+        .select-box select
+        {
+            height: 100%;
+            width:100%;
+            outline: none;
+            border:none;
+            color:#707070;
+            font-size: 1rem;
+        }
+        .form button
+        {
+            height:55px;
+            width:100%;
+            color:#fff;
+            font-size: 1rem;
+            border: none;
+            margin-top: 30px;
+            cursor:pointer;
+            border-radius: 6px;
+            font-weight: 400;
+            transition: all 0.2s ease;
+            background-color: rgb(130,106,251);
+        }
+        .form button:hover
+        {
+            background-color: rgb(88,56,250);
+        }
+        /*Responsive*/
+        @media screen and (max-width:500px)
+        {
+            .form .column
+            {
+                flex-wrap: wrap;
+            }
+            .form :where(.gender-option, .gender)
+            {
+                row-gap: 15px;
+            }
+        }
+    </style>-->
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">menu</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="header.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact +</a>
+                <ul>
+                  <li><a href="regestration.php">Regestration</a></li>
+                </ul>
+                <li><a href="donation.php">Donation</a></li>
+                <li><a href="activity.html">Activity +</a>
+                    <ul>
+                        <li><a href="festival.html">Festival celebration</a></li>
+                        <li><a href="food.html">Food facility</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://ehospital.gov.in/ehospitalsso/">Emergency +</a>
+                    <ul>
+                        <li><a href="regularhealth.php">Regular health checkup</a></li>
+                        <li><a href="room facility.php">Room facility</a></li>
+                        <li><a href="#assistant facility">Assistant facility</a></li>
+                    </ul>
+                </li>
+                <li><a href="helpline.html">Helpline</a></li>
+                <li><a href="description.html">Description</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--  -->
+    <!--  -->
+    <section class="container">
+        <div class="registrationheader">Registration Form</div>
+            <form action="#" class="form" method="POST">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="text" name="email" required>
+                </div>
+                <div class="column">
+                    <div class="input-box">
+                        <label>Phone Number</label>
+                        <input type="number" name="no" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <label>Birth Date</label>
+                        <input type="date" name="dob"required>
+                    </div>
+                </div>
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender option">
+                        <div class="gender">
+                            <input type="radio" name="gender" value="Male">
+                            <label for="check-male">Male</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio"  name="gender" value="Female">
+                            <label for="check-female">Female</label>
+                        </div> 
+                         <div class="gender">
+                            <input type="radio" id="check-other" name="gender" value="Prefer not to say">
+                            <label for="check-other">Prefer not to say </label>
+                        </div> 
+                     </div>
+                </div>
+                <div class="input-box address">
+                    <label>Address</label>
+                    <input type="text" name="address" required>
+                
+                </div>
+                <div class="input-box address">
+                    <label>state</label>
+                    <input type="text" name="state" required>
+                
+                </div>
+                <div class="input-box address">
+                    <label>city</label>
+                    <input type="text" name="city" required>
+                </div>
+                <button value="submit" name="submit">Insert</button>
+                <button><a href="header.html">Back</a></button>
+            </form>
+        </div> 
+    </section>
+</body>
+</html>
+   

@@ -1,0 +1,89 @@
+<?php
+    $con=mysqli_connect("localhost","root","");
+    mysqli_select_db($con,"2ndinninghome");
+    echo "connection";
+    ?>
+<?php
+
+    if(isset($_POST["insert"]))
+    {
+        $name =$_POST["name"];
+        $email =$_POST["email"];
+        $rupess =$_POST["rupess"];
+        $query ="INSERT INTO `newdonation`(`id`, `name`, `email`, `rupess`) VALUES ('','$name','$email','$rupess')";
+        mysqli_query($con,$query);
+        echo "<script>alert('Insert READY ------>>');</script>";
+    }
+
+?>
+<html>
+    <head>
+        <title>Drop-down Menu design - Easy Tutorials</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="header.css"> 
+        <!-- <link rel="stylesheet" href="style6.css"> -->
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <title>User login form</title>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar">menu</label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="header.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact +</a>
+                    <ul>
+                      <li><a href="regestration.php">Regestration</a></li>
+                    </ul>
+                    <li><a href="donation.php">Donation</a></li>
+                    <li><a href="#activity+">Activity +</a>
+                        <ul>
+                            <li><a href="festival.html">Festival celebration</a></li>
+                            <li><a href="food.html">Food facility</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="regularhealth.php">RHC +</a>
+                        <ul>
+                            <li><a href="https://ehospital.gov.in/ehospitalsso/">Emergency</a></li>
+                            <li><a href="rooms.php">Room facility</a></li>
+                            <li><a href="#assistant facility">Assistant facility</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="helpline.html">Helpline</a></li>
+                    <li><a href="description.html">Description</a></li>
+                    <li><a href="login.html">Login</a></li> 
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="box">
+            <form action="">
+                <h2>Sign In</h2>
+                <div class="inputBox">
+                    <input type="text" required>
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required>
+                    <span>Enter Password</span>
+                    <i></i>
+                </div>
+                <input type="submit" value="Login">
+                <div class="links">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">SignUp</a>
+                </div>
+                <center><button id="back"><a href="header.php">Back</a></button></center>
+            </form>
+        </div>
+    </body>
+</html>

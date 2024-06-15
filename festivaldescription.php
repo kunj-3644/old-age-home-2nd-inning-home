@@ -1,0 +1,322 @@
+<html>
+    <head>
+        <title>festival</title>
+        <style>
+        *
+        {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+            text-decoration:none;
+        }
+        body
+        {
+            min-height: 100vh;
+            background:url("i4.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+        } 
+        header
+        {
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            background:#ffffff;
+            box-shadow:0 5px 10px rgba(152, 17, 17, 0.1);
+            padding:0px 7%;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index:1000;
+        }
+        header .logo
+        {
+            font-weight: bolder;
+            font-size: 25px;
+            color:#333;
+        }
+        header .navbar ul
+        {
+            list-style: none;
+        }
+        header .navbar ul li
+        {
+            position: relative;
+            float:left;
+        }
+        header .navbar ul li a
+        {
+            font-size:20px;
+            padding:20px;
+            color:#333;
+            display:block;
+        }
+        header .navbar ul li a:hover
+        {
+            background:#333;
+            color:#fff;
+        }
+        header .navbar ul li ul
+        {
+            position:absolute;
+            left:0;
+            width:200px;
+            background:#fff;
+            display:none;
+        }
+        header .navbar ul li ul li
+        {
+            width:100%;
+            border-top: 1px solid rgba(0,0,0,.1);
+        }
+        header .navbar ul li ul li ul
+        {
+            left:200px;
+            top:0;
+        }
+        header .navbar ul li:focus-within> ul,
+        header .navbar ul li:hover > ul
+        {
+            display: initial;
+        }
+        #menu-bar
+        {
+            display: none;
+        }
+        header label
+        {
+            font-size: 20px;
+            color:#333;
+            cursor:pointer;
+            display: none;
+        }
+        @media(max-width:992px)
+        {
+            header
+            {
+                padding:20px;
+            }
+            header label
+            {
+                display: initial;
+            }
+            header .navbar
+            {
+                position: absolute;
+                top:100%;
+                left:0;
+                right:0;
+                background: #fff;
+                border-top: 1px solid rgba(0,0,0,.1);
+                display: none;
+            }
+            header .navbar ul li
+            {
+                width:100%;
+            }
+            header .navbar ul li ul
+            {
+                position: relative;
+                width: 100%;
+            }
+            header .navbar ul li ul li
+            {
+                background: #eee;
+            }
+            header .navbar ul li ul li ul
+            {
+                width:100%;
+                left:0;
+            }
+            #menu-bar:checked ~ .navbar
+            {
+                display: initial;
+            }
+            .logo6
+            {
+                position:relative;
+                float:left;
+                height:100%;
+                width:75px;
+                background-image:url("raj8.png");
+                margin-left:1px;
+                background-size:10vh;
+            }
+            #chk1
+            {
+                display:none;
+            }
+            i
+            {
+                color:black;
+                cursor:pointer;
+            }
+            .home
+            {
+                position:relative;
+                float:left;
+                height:100%;
+                width:100%;
+                background:linear-gradient(to right,black,white);
+                /*  height:100vh;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                overflow:hidden; */
+            }
+            .subhome
+            {
+                height:100vh;
+                display:flex;
+                align-items:center;
+                justify-content:Center;
+                overflow:hidden;
+            }
+            .slider
+            {
+                position:relative;
+                width:200px;
+                height:200px;
+                transform-style:preserve-3d;
+                animation:rotate 30s linear infinite;
+            }
+            /*slideshow*/
+            @keyframes rotate
+            {
+                0%
+                {
+                    transform:perspective(1000px) rotateY(0deg);
+                }
+                100%
+                {
+                    transform:perspective(1000px) rotateY(360deg);
+                }
+            } 
+            /*slideshow*/
+            .slider span
+            {
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                transform-origin:center;
+                transform-style:preserve-3d;
+                transform:rotateY(calc(var(--i)*45deg)) translateZ(350px); 
+            }
+            .slider span img
+            {
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                border-radius:15px 5px 15px;
+                border-color:red;
+                object-fit:cover;
+                transition:2s;
+            }
+            .footer
+            {
+                position: relative;
+                float:left;
+                height:100%;
+                width:100%;
+                background-color:lightblue;
+            }
+        }
+        /* header over  */
+        /* .box1
+        {
+            position: relative;
+            float: left;
+            height:100%;
+            width: 100%;
+            background-color:lightblue;
+        } */
+        /* .subimagebox1_0
+        {
+            position: relative;
+            float:left;
+            height:100%;
+            width:100%;
+            background: #af9696;
+        } */
+        </style>
+    </head>
+    <body>
+    <header>
+            <a href="#" class="logo">Logo</a>
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar">menu</label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="header.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact +</a>
+                    <ul>
+                      <li><a href="regestration.php">Regestration</a></li>
+                    </ul>
+                    <li><a href="donation.php">Donation</a></li>
+                    <li><a href="#activity+">Activity +</a>
+                        <ul>
+                            <li><a href="festival.php">Festival celebration</a></li>
+                            <li><a href="food.php">Food facility</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="regularhealth.php">RHC +</a>
+                        <ul>
+                            <li><a href="https://ehospital.gov.in/ehospitalsso/">Emergency</a></li>
+                            <li><a href="rooms.php">Room facility</a></li>
+                            <li><a href="#assistant facility">Assistant facility</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="helpline.php">Helpline</a></li>
+                    <li><a href="description.php">Description</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--  -->
+        <!-- <div class="box1"> -->
+            <!-- <div class="subimagebox1_0"> -->
+                <table border="0" height="50%" width="100%" style="margin-top:50px;  border:hidden; background-color:rgb(144, 94, 111); opacity:0.8;">
+                    <tr>
+                        <td style="background-image: url(img/diwali.jpg); background-size:cover; background-repeat: no-repeat;"></td>
+                        <td style="width:50%; color:black; text-shadow: 2px 2px 3px rgb(123, 94, 142); font-family: 'Courier New', Courier, monospace; font-weight: 800; font-style: oblique;"><a href="header.php" style="color:black;">Diwali is a festival of lights.<br>It is one of the biggest and greatest festivals celebrated mainly in India.<br>Diwali is a festival commemorate to mark joy,victory,and harmony.Diwali is also known as Deepawali,falls in October or November.<br>It is celebrated fter 20 days of the Dussehra festival.</a></font></Center></td>
+                    </tr>
+                </table>
+                <!--  -->
+                <table border="0" height="50%" width="100%" style="margin-top:0px;  border:hidden; background-color:rgb(78, 187, 183); opacity:0.8;">
+                    <tr>
+                        <td style="background-image: url(img/rakshabandhan.jpg); background-size:cover; background-repeat: no-repeat;"></td>
+                        <td style="width:50%; color:black; text-shadow: 2px 2px 3px rgb(123, 94, 142); font-family: 'Courier New', Courier, monospace; font-weight: 800; font-style: oblique;"><a href="header.php" style="color:black;">Raksha Bandhan is also known as Rakhi, is a cherished Hindu festival celebrating the bond between brothers and sisters. Typically observed in India and other parts of South Asia, Raksha Bandhan falls on the full moon day of the Hindu lunar month of Shravan.</a></font></Center>
+                        </td>
+                    </tr>
+                </table>
+                <!--  -->
+                <table border="0" height="50%" width="100%" style="margin-top:0px;  border:hidden; background-color:rgb(144, 94, 111); opacity:0.8;">
+                    <tr>
+                        <td style="background-image: url(img/holi.jpg); background-size:cover; background-repeat: no-repeat;"></td>
+                        <td style="width:50%; color:black; text-shadow: 2px 2px 3px rgb(123, 94, 142); font-family: 'Courier New', Courier, monospace; font-weight: 800; font-style: oblique;"><a href="header.php" style="color:black;">Holi is also known as the Festival of colors,the Festival of Spring,and the Festival of Love,is an ancient Hindu religious festival and one of the most popular festivals in Hinduism.It celebrates the eternal and divine love of Radha Krishna.</a></font></Center>
+                        </td>
+                    </tr>
+                </table>
+                <!-- -->
+                 <table border="0" height="50%" width="100%" style="margin-top:0px; border:hidden; background-color:rgb(78, 187, 183); opacity:0.8;">
+                    <tr>
+                        <td style="background-image: url(img/pariyushan.jpg); background-size:cover; background-repeat: no-repeat;"></td>
+                        <td style="width:50%; color:black; text-shadow: 2px 2px 3px rgb(123, 94, 142); font-family: 'Courier New', Courier, monospace; font-weight: 800; font-style: oblique;"><a href="header.php" style="color:black;">Paryushan is a time for intense introspection, self-discipline, and spiritual upliftment. During this period, Jains focus on the principles of non-violence (ahimsa), truthfulness (satya), non-stealing (asteya), celibacy (brahmacharya), and non-possession (aparigraha).The festival culminates with Samvatsari, the Day of Forgiveness, where Jains ask for forgiveness from all living beings and offer forgiveness to others. It's a day of deep reflection, repentance, and renewal of vows.</a></font></Center>
+                    </tr>
+                </table>
+                <!-- <div class="image1">
+                    </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    </body>
+    <?php include 'footer.php'?>
+</html>
